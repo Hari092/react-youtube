@@ -39,7 +39,7 @@ function Header() {
             {<SlMagnifier size={20} className=" text-gray-500 mt-1 sm:mt-1" />}
           </button>
         </div>
-        <ul className=" absolute bg-white mt-10 sm:w-96 w-72">
+        <ul className=" absolute bg-white mt-10 sm:w-96 w-72 z-10">
           {selector.map((res, index) => (
             <li
               key={index}
