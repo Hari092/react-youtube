@@ -3,9 +3,10 @@ import Body from "./components/Body";
 import Header from "./components/Header";
 import store from "./utilities/Store";
 import MainContainer from "./components/MainContainer";
-
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import WatchPage from "./components/WatchPage";
+import UserDetails from "./components/UserDetails";
+import LoginForm from "./components/LoginForm";
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +20,14 @@ const appRouter = createBrowserRouter([
         path: "watch",
         element: <WatchPage />,
       },
+      {
+        path:'/user',
+        element:<UserDetails/>
+      },
+      {
+        path: "/login",
+        element:<LoginForm/>
+      }
     ],
   },
 ]);

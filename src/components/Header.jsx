@@ -6,6 +6,7 @@ import { sideBarOpen } from "../utilities/ToggleSlice";
 import { useState } from "react";
 import useGetSearchVal from "../Hooks/useGetSearchVal";
 import { CiSearch } from "react-icons/ci";
+// import { Link } from "react-router-dom";
 
 function Header() {
   const selector = useSelector((store) => store.search.searchVal);
@@ -24,7 +25,11 @@ function Header() {
           className="mt-0 cursor-pointer hidden sm:block"
           onClick={() => toggleSider()}
         />
-        <img src={youtubeLogo} alt="youtube-logo" className="sm:h-7 h-4 mt-3 sm:mt-0" />
+        <img
+          src={youtubeLogo}
+          alt="youtube-logo"
+          className="sm:h-7 h-4 mt-3 sm:mt-0"
+        />
       </div>
       <div className=" sm:col-span-10 sm:px-40 flex flex-col">
         <div className="sm:w-full ms-5 sm:ms-0 flex sm:block">
@@ -45,13 +50,16 @@ function Header() {
               key={index}
               className="cursor-pointer font-semibold text-black my-2 text-base hover:bg-gray-200 px-1 "
             >
-              <CiSearch  className="inline-block me-1" />{res}
+              <CiSearch className="inline-block me-1" />
+              {res}
             </li>
           ))}
         </ul>
       </div>
       <div className="col-span-1 cursor-pointer ms-10 sm:ms-0 flex gap-3 pt-1 sm:pt-0">
-        <img alt="user-logo" src={userLogo} className="h-7" />
+        <a href={"/user"}>
+          <img alt="user-logo" src={userLogo} className="h-7" />
+        </a>
         <a href="/">
           <img src={homeIcon} alt="home" className="h-7" />
         </a>
