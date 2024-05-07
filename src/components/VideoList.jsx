@@ -12,7 +12,7 @@ function VideoList({ info }) {
   const views = Number(viewCount / 1000).toFixed();
   const likes = Number(likeCount / 1000).toFixed();
   return (
-    <div className="p-2 sm:m-2 sm:w-80 w-full -translate-x-1 shadow-lg cursor-pointer h-80 mb-2 pb-2 ">
+    <div className="p-2 sm:m-2 sm:w-80 w-full -translate-x-1 shadow-lg cursor-pointer h-80 mb-2 pb-2 relative">
       <img
         src={thumbnails?.medium.url}
         alt="thumbnail"
