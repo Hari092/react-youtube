@@ -10,7 +10,8 @@ import { CiSearch } from "react-icons/ci";
 
 function Header() {
   const selector = useSelector((store) => store.search.searchVal);
-  console.log(selector);
+  const user = useSelector((store)=> store.user)
+  console.log(selector,user);
   const dispatch = useDispatch();
   const [val, setVal] = useState("");
   useGetSearchVal(val);
@@ -57,7 +58,8 @@ function Header() {
         </ul>
       </div>
       <div className="col-span-1 cursor-pointer ms-10 sm:ms-0 flex gap-3 pt-1 sm:pt-0">
-        <a href={"/user"}>
+
+        <a href={ user ? "/user" : "/login"}>
           <img alt="user-logo" src={userLogo} className="h-7" />
         </a>
         <a href="/">

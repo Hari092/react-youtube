@@ -4,6 +4,7 @@ import mainVideoReducer from "./VideoSlice";
 import searchReducer from "./SearchSlice";
 import commentReducer from "./CommentSlice";
 import liveReducer from "./LiveSlice";
+import userSlice from "./userSlice";
 
 const store=configureStore({
     reducer:{
@@ -12,6 +13,7 @@ const store=configureStore({
         search:searchReducer,
         comment:commentReducer,
         live:liveReducer,
+        user:userSlice,
   },
 })
 export default store;
